@@ -44,6 +44,8 @@ class UsersExport implements FromArray
             'text' => "Hello from Docker",
         ]);
 
+        Log::info($response);
+
         return [
             ["File Name", "Created", "Modified",'Size'],
             $data
