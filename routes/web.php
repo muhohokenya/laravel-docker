@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return "Test";
+    return "Docker is working Well";
 });
 
 
