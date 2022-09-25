@@ -1,0 +1,287 @@
+[
+    {
+        "recordType": "file",
+        "id": "10831895",
+        "values": {
+            "name": "12457JN VDF.eps",
+            "created": "09/21/2021 6:40 pm",
+            "modified": "09/21/2021 6:40 pm",
+            "documentsize": "1175",
+            "filetype": [
+                {
+                    "value": "POSTSCRIPT",
+                    "text": "PostScript File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10547331",
+                    "text": "09-21-2021_Message_16827681"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10753684",
+        "values": {
+            "name": "124645_WSUAlumniAssociation_StadiumCups(SF22SQ)_Art.pdf",
+            "created": "09/15/2021 6:03 pm",
+            "modified": "09/15/2021 6:03 pm",
+            "documentsize": "384",
+            "filetype": [
+                {
+                    "value": "PDF",
+                    "text": "PDF File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10471344",
+                    "text": "09-15-2021_Message_16724360"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10753685",
+        "values": {
+            "name": "124645_WSUAlumniAssociation_StadiumCups(SF22SQ)_Proof.pdf",
+            "created": "09/15/2021 6:03 pm",
+            "modified": "09/15/2021 6:03 pm",
+            "documentsize": "234",
+            "filetype": [
+                {
+                    "value": "PDF",
+                    "text": "PDF File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10471344",
+                    "text": "09-15-2021_Message_16724360"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10890324",
+        "values": {
+            "name": "124847 art.pdf",
+            "created": "09/24/2021 8:37 pm",
+            "modified": "09/24/2021 8:37 pm",
+            "documentsize": "25",
+            "filetype": [
+                {
+                    "value": "PDF",
+                    "text": "PDF File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10603944",
+                    "text": "09-24-2021_Message_16902175"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10693266",
+        "values": {
+            "name": "128537 - Current Midtown - Flying Disk (002).pdf",
+            "created": "09/10/2021 6:51 pm",
+            "modified": "09/10/2021 6:51 pm",
+            "documentsize": "27",
+            "filetype": [
+                {
+                    "value": "PDF",
+                    "text": "PDF File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10412687",
+                    "text": "09-10-2021_Message_16640599"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10850110",
+        "values": {
+            "name": "1286021-ADP-college-cup.eps",
+            "created": "09/22/2021 5:54 pm",
+            "modified": "09/22/2021 5:54 pm",
+            "documentsize": "51",
+            "filetype": [
+                {
+                    "value": "POSTSCRIPT",
+                    "text": "PostScript File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10564970",
+                    "text": "09-22-2021_Message_16850460"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10850111",
+        "values": {
+            "name": "1286021-ADP-college-cup.jpg",
+            "created": "09/22/2021 5:54 pm",
+            "modified": "09/22/2021 5:54 pm",
+            "documentsize": "79",
+            "filetype": [
+                {
+                    "value": "JPGIMAGE",
+                    "text": "JPEG Image"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10564970",
+                    "text": "09-22-2021_Message_16850460"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10739151",
+        "values": {
+            "name": "1288300-1708176-joe macri realty logo.pdf",
+            "created": "09/14/2021 8:44 pm",
+            "modified": "09/14/2021 8:44 pm",
+            "documentsize": "59",
+            "filetype": [
+                {
+                    "value": "PDF",
+                    "text": "PDF File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10457196",
+                    "text": "09-14-2021_Message_16702950"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10810782",
+        "values": {
+            "name": "1289046-1708993-Chilito_yellow.psd",
+            "created": "09/20/2021 5:17 pm",
+            "modified": "09/20/2021 5:17 pm",
+            "documentsize": "6021",
+            "filetype": [
+                {
+                    "value": "MISCBINARY",
+                    "text": "Other Binary File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10526809",
+                    "text": "09-20-2021_Message_16801136"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10812763",
+        "values": {
+            "name": "1289799-1709806-Pilgrim koozie 2021.ai",
+            "created": "09/20/2021 7:34 pm",
+            "modified": "09/20/2021 7:34 pm",
+            "documentsize": "1933",
+            "filetype": [
+                {
+                    "value": "MISCBINARY",
+                    "text": "Other Binary File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10528747",
+                    "text": "09-20-2021_Message_16804226"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10812762",
+        "values": {
+            "name": "1289799-1709806-Pilgrim Logo koozie 2021.pdf",
+            "created": "09/20/2021 7:34 pm",
+            "modified": "09/20/2021 7:34 pm",
+            "documentsize": "1884",
+            "filetype": [
+                {
+                    "value": "PDF",
+                    "text": "PDF File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10528747",
+                    "text": "09-20-2021_Message_16804226"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10843725",
+        "values": {
+            "name": "1290636-1710670-HenryCo4H flashdrive.pdf",
+            "created": "09/22/2021 1:37 pm",
+            "modified": "09/22/2021 1:37 pm",
+            "documentsize": "11",
+            "filetype": [
+                {
+                    "value": "PDF",
+                    "text": "PDF File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10558815",
+                    "text": "09-22-2021_Message_16842742"
+                }
+            ]
+        }
+    },
+    {
+        "recordType": "file",
+        "id": "10845749",
+        "values": {
+            "name": "1290664-1710702-goodmews-BottomsUp_onTemplate_FZCC.pdf.zip",
+            "created": "09/22/2021 3:17 pm",
+            "modified": "09/22/2021 3:17 pm",
+            "documentsize": "283",
+            "filetype": [
+                {
+                    "value": "ZIP",
+                    "text": "Zip File"
+                }
+            ],
+            "folder": [
+                {
+                    "value": "10560762",
+                    "text": "09-22-2021_Message_16845101"
+                }
+            ]
+        }
+    }]
