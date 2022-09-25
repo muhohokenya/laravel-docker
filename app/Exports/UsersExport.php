@@ -33,18 +33,8 @@ class UsersExport implements FromArray
             ]);
         }
 
-        $response = Http::post('http://example.com/users', [
-            'name' => 'Steve',
-            'role' => 'Network Administrator',
-        ]);
+        Log::info($data);
 
-        $slackUrl = "https://hooks.slack.com/services/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";
-
-        $response = Http::acceptJson()->post($slackUrl,[
-            'text' => "Hello from Docker",
-        ]);
-
-        Log::info($response);
 
         return [
             ["File Name", "Created", "Modified",'Size'],
