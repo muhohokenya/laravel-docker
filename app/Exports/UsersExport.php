@@ -33,7 +33,7 @@ class UsersExport implements FromArray
             ]);
         }
 
-        Log::info($data);
+        Log::info("create excel",$data);
 
 
         return [
