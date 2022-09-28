@@ -13,6 +13,7 @@ class ExcelController extends Controller
     public function export(Request $request)
     {
         $files = $request->get('data');
-        return Excel::store(new UsersExport($files), now()->format('d-m-Y')."-".'files.xlsx');
+        $fileName = now()->format('d-m-Y')."-".'transferred-files.xlsx';
+        return Excel::store(new UsersExport($files), $fileName);
     }
 }
