@@ -31,7 +31,7 @@ class FilesTransfered extends Mailable
      */
     public function build()
     {
-        $location = storage_path("app/files.xlsx");
+        $location = storage_path("laravel-docker/app/files.xlsx");
         return $this
             ->markdown('emails.files.transferred')
             ->attach($location);
