@@ -16,25 +16,22 @@ class ExcelController extends Controller
     public function export(Request $request)
     {
         $files = $request->get('data');
-        $fileName = now()->format('d-m-Y')."-".'transferred-files.xlsx';
-        if(Storage::disk('local')->exists($fileName)){
-            Storage::disk('local')->delete($fileName);
-        }else{
-            $response =  Excel::store(new UsersExport($files), $fileName);
+        $fileName = now()->format('d-m-Y') . "-" . 'transferred-files.xlsx';
+        Storage::disk('local')->delete($fileName);
+        $response = Excel::store(new UsersExport($files), $fileName);
 
 
-            if($response){
-                $data = [];
-                foreach ($files as $file) {
-                    array_push($data,[
-                        $file['values']['name'],
-                        $file['values']['created'],
-                        $file['values']['modified'],
-                        $file['values']['documentsize'],
-                    ]);
-                }
-                Mail::to('jeremiah.muhoho@thejitu.com')->send(new FilesTransfered($data));
+        if ($response) {
+            $data = [];
+            foreach ($files as $file) {
+                array_push($data, [
+                    $file['values']['name'],
+                    $file['values']['created'],
+                    $file['values']['modified'],
+                    $file['values']['documentsize'],
+                ]);
             }
+            Mail::to('jeremiah.muhoho@thejitu.com')->send(new FilesTransfered($data));
         }
     }
 }
