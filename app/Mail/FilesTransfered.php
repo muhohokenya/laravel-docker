@@ -2,10 +2,12 @@
 
 namespace App\Mail;
 
+use App\Exports\UsersExport;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Maatwebsite\Excel\Facades\Excel;
 
 class FilesTransfered extends Mailable
 {
@@ -29,6 +31,13 @@ class FilesTransfered extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.files.transferred');
+        return $this
+            ->markdown('emails.files.transferred')
+            ->attach(
+                Excel::download(
+                    new UsersExport($this->files),
+                    'files.xlsx')
+                    ->getFile(), ['as' => 'report.xlsx']
+            );
     }
 }
