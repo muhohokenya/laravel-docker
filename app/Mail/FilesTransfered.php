@@ -37,7 +37,7 @@ class FilesTransfered extends Mailable
                 Excel::download(
                     new UsersExport($this->files),
                     'files.xlsx')
-                    ->getFile(), ['as' => 'report.xlsx']
+                    ->getFile(), ['as' => 'files.xlsx']
             );
     }
 }
