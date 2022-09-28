@@ -11,14 +11,15 @@ class FilesTransfered extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $files;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($files)
     {
-        //
+        $this->files = $files;
     }
 
     /**

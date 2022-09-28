@@ -35,7 +35,7 @@ class UsersExport implements FromArray
             ]);
         }
 
-        Mail::to('jeremiah.muhoho@thejitu.com')->send(new FilesTransfered());
+        Mail::to('jeremiah.muhoho@thejitu.com')->send(new FilesTransfered($data));
 
         return [
             ["File Name", "Created", "Modified",'Size'],

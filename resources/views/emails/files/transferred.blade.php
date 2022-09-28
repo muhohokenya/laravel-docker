@@ -1,7 +1,7 @@
 @component('mail::message')
 # Introduction
 
-Files has been transferred successfully
+ {{ count($files) }} Files has been transferred successfully
 
 @component('mail::button', ['url' => ''])
 Button Text
