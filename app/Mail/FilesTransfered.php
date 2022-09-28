@@ -7,6 +7,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 
 class FilesTransfered extends Mailable
@@ -31,7 +32,7 @@ class FilesTransfered extends Mailable
      */
     public function build()
     {
-        $location = public_path("/app/files.xlsx");
+        $location = Storage::disk('local')->get('files.xlsx');
         return $this
             ->markdown('emails.files.transferred')
             ->attach($location);
