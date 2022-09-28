@@ -16,7 +16,8 @@ class ExcelController extends Controller
     {
         $files = $request->get('data');
         $fileName = now()->format('d-m-Y')."-".'transferred-files.xlsx';
-        Excel::store(new UsersExport($files), $fileName);
+       $data =  Excel::store(new UsersExport($files), $fileName);
        return Mail::to('jeremiah.muhoho@thejitu.com')->send(new FilesTransfered($data));
+
     }
 }

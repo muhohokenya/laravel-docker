@@ -35,8 +35,6 @@ class UsersExport implements FromArray
             ]);
         }
 
-        
-
         return [
             ["File Name", "Created", "Modified",'Size'],
             $data
