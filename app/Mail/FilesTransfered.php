@@ -36,7 +36,7 @@ class FilesTransfered extends Mailable
         $location = Storage::disk('local')->get('files.xlsx');
         Log::write('info',$location);
         return $this
-            ->markdown('emails.files.transferred');
-//            ->attach($location);
+            ->markdown('emails.files.transferred')
+            ->attach($location);
     }
 }
