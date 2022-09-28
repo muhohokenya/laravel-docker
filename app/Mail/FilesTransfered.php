@@ -32,12 +32,12 @@ class FilesTransfered extends Mailable
     public function build()
     {
         return $this
-            ->markdown('emails.files.transferred')
-            ->attach(
+            ->markdown('emails.files.transferred');
+            /*->attach(
                 Excel::download(
                     new UsersExport($this->files),
                     'files.xlsx')
                     ->getFile(), ['as' => 'files.xlsx']
-            );
+            );*/
     }
 }
