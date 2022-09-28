@@ -34,7 +34,6 @@ class FilesTransfered extends Mailable
     public function build()
     {
         $location = Storage::path('files.xlsx');
-        //('files.xlsx');
         Log::write('info',$location);
         return $this
             ->markdown('emails.files.transferred')
