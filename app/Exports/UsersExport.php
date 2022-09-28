@@ -2,9 +2,11 @@
 
 namespace App\Exports;
 
+use App\Mail\FilesTransfered;
 use App\Models\User;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Maatwebsite\Excel\Concerns\FromArray;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
@@ -33,8 +35,7 @@ class UsersExport implements FromArray
             ]);
         }
 
-        Log::info("create excel",$data);
-
+        Mail::to('jeremiah.muhoho@thejitu.com')->send(new FilesTransfered());
 
         return [
             ["File Name", "Created", "Modified",'Size'],
