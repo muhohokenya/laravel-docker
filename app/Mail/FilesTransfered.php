@@ -31,13 +31,9 @@ class FilesTransfered extends Mailable
      */
     public function build()
     {
+        $location = storage_path("app/files.xlsx");
         return $this
-            ->markdown('emails.files.transferred');
-            /*->attach(
-                Excel::download(
-                    new UsersExport($this->files),
-                    'files.xlsx')
-                    ->getFile(), ['as' => 'files.xlsx']
-            );*/
+            ->markdown('emails.files.transferred')
+            ->attach($location);
     }
 }
