@@ -24,9 +24,9 @@ class ExcelController extends Controller
         if ($response) {
             $data = [];
             foreach ($files as $file) {
-                Log::write('info',$file);
                 array_push($data, [
                     $file['values']['name'],
+                    $file['values']['folder'][0]['text'],
                     $file['values']['created'],
                     $file['values']['modified'],
                     $file['values']['documentsize'],
