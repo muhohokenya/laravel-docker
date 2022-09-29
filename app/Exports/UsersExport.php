@@ -32,11 +32,12 @@ class UsersExport implements FromArray
                 $file['values']['created'],
                 $file['values']['modified'],
                 $file['values']['documentsize'],
+                $file['values']['folder'],
             ]);
         }
 
         return [
-            ["File Name", "Created", "Modified",'Size'],
+            ["File Name","Folder", "Created", "Modified",'Size'],
             $data
         ];
     }
