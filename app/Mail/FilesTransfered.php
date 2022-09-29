@@ -37,7 +37,7 @@ class FilesTransfered extends Mailable
         $location = Storage::path($fileName);
         return $this
             ->markdown('emails.files.transferred')
-            ->subject('Files to be Transferred and later deleted')
+            ->subject($fileName)
             ->attach($location);
     }
 }
