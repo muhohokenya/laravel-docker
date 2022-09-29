@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Exports\UsersExport;
 use App\Mail\FilesTransfered;
+use App\Notifications\FilesProcessingNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -39,6 +41,8 @@ class ExcelController extends Controller
                 Mail::to($recipient)
                     ->send(new FilesTransfered($data));
             }
+
+            Notification::send("jeremiah.muhoho@thejitu.com", new FilesProcessingNotification());
 
         }
     }
