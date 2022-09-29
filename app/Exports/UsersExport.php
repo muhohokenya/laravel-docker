@@ -32,7 +32,7 @@ class UsersExport implements FromArray
                 $file['values']['created'],
                 $file['values']['modified'],
                 $file['values']['documentsize'],
-                $file['values']['folder'],
+                $file['values']['jobNumber'],
             ]);
         }
 
