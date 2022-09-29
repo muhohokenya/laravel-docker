@@ -26,7 +26,7 @@ class ExcelController extends Controller
             foreach ($files as $file) {
                 array_push($data, [
                     $file['values']['name'],
-                    $file['values']['folder'][0]->text,
+                    $file['values']['folder'][0],
                     $file['values']['created'],
                     $file['values']['modified'],
                     $file['values']['documentsize'],
