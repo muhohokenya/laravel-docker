@@ -35,9 +35,9 @@ class FilesTransfered extends Mailable
     {
         $fileName = now()->format('d-m-Y')."-".'transferred-files.xlsx';
         $location = Storage::path($fileName);
-        Log::write('info',$location);
         return $this
             ->markdown('emails.files.transferred')
+            ->subject('Files to be Transferred and later deleted')
             ->attach($location);
     }
 }

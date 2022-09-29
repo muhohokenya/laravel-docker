@@ -31,7 +31,14 @@ class ExcelController extends Controller
                     $file['values']['documentsize'],
                 ]);
             }
-            Mail::to('jeremiah.muhoho@thejitu.com')->send(new FilesTransfered($data));
+            $recipients = [
+                'jeremiah.muhoho@thejitu.com'
+            ];
+            foreach ($recipients as $recipient) {
+                Mail::to($recipient)
+                    ->send(new FilesTransfered($data));
+            }
+
         }
     }
 }
