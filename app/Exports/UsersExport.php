@@ -38,7 +38,7 @@ class UsersExport implements FromArray
         }
 
         return [
-            ["Id","File Name","Job Number", "Created", "Modified",'Size'],
+            ["File Name","Job Number", "Created", "Modified",'Size'],
             $data
         ];
     }
