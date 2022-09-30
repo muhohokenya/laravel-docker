@@ -27,8 +27,8 @@ class UsersExport implements FromArray
 
         $data = [];
         foreach ($this->files as $file) {
+            Log::write('debug', $file['values']['id'],);
             array_push($data,[
-                $file['values']['id'],
                 $file['values']['name'],
                 $file['values']['folder'][0]['text'],
                 $file['values']['created'],
