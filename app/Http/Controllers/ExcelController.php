@@ -27,6 +27,7 @@ class ExcelController extends Controller
             $data = [];
             foreach ($files as $file) {
                 array_push($data, [
+                    $file['values']['id'],
                     $file['values']['name'],
                     $file['values']['folder'][0]['text'],
                     $file['values']['created'],
@@ -41,8 +42,6 @@ class ExcelController extends Controller
                 Mail::to($recipient)
                     ->send(new FilesTransfered($data));
             }
-
-            Notification::send("jeremiah.muhoho@thejitu.com", new FilesProcessingNotification());
 
         }
     }

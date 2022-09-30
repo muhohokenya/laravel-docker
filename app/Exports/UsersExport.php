@@ -28,6 +28,7 @@ class UsersExport implements FromArray
         $data = [];
         foreach ($this->files as $file) {
             array_push($data,[
+                $file['values']['id'],
                 $file['values']['name'],
                 $file['values']['folder'][0]['text'],
                 $file['values']['created'],
@@ -37,7 +38,7 @@ class UsersExport implements FromArray
         }
 
         return [
-            ["File Name","Job Number", "Created", "Modified",'Size'],
+            ["Id","File Name","Job Number", "Created", "Modified",'Size'],
             $data
         ];
     }
