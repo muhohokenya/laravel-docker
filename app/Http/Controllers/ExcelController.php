@@ -50,6 +50,7 @@ class ExcelController extends Controller
 
     public function exportDeletedFiles(Request $request)
     {
+        Log::info('Request',$request->all());
         $files = $request->all();
         $fileName = now()->format('d-m-Y') . "-" . 'deleted-files.xlsx';
         Storage::disk('local')->delete($fileName);
