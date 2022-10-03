@@ -38,7 +38,8 @@ class ExcelController extends Controller
                 ]);
             }
             $recipients = [
-                'jeremiah.muhoho@thejitu.com'
+                'jeremiah.muhoho@thejitu.com',
+                'faith.kihara@thejitu.com',
             ];
             foreach ($recipients as $recipient) {
                 Mail::to($recipient)
@@ -68,7 +69,8 @@ class ExcelController extends Controller
                 ]);
             }
             $recipients = [
-                'jeremiah.muhoho@thejitu.com'
+                'jeremiah.muhoho@thejitu.com',
+                'faith.kihara@thejitu.com',
             ];
             foreach ($recipients as $recipient) {
                 Mail::to($recipient)
