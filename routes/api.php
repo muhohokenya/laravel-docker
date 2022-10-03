@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::post('files/export',[ExcelController::class,'export']);
+Route::post('files/export-deleted',[ExcelController::class,'exportDeletedFiles']);
