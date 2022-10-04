@@ -14,6 +14,6 @@ class ApiController extends Controller
         return ['token' => $token->plainTextToken];
     }
     public function index(){
-//        return File::all();
+        return File::all();
     }
 }
