@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ExcelController;
+use App\Http\Controllers\Welcome;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return "Docker is working Well!!";
-});
+Route::get('/dashboard',[Welcome::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
-
+require __DIR__.'/auth.php';
