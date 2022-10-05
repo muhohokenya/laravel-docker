@@ -1,11 +1,7 @@
 @component('mail::message')
-# Introduction
+# Leprechaun Scheduled transfer and Deletion
 
- {{ count($files) }} Files has been transferred successfully
-
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+ {{ count($files) }} Files has been found and are now in the transfer Queue
 
 Thanks,<br>
 {{ config('app.name') }}
