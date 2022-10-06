@@ -37,7 +37,7 @@ class FilesTransfered extends Mailable
         $location = Storage::path($fileName);
         return $this
             ->markdown('emails.files.transferred')
-            ->subject($fileName)
+            ->subject("Scheduled files for transfer in job Documents folder")
             ->attach($location);
     }
 }
