@@ -34,7 +34,7 @@ class FilesDeleted extends Mailable
         $location = Storage::path($fileName);
         return $this
             ->markdown('emails.files.deleted')
-            ->subject($fileName)
+            ->subject("Transferred and deleted files from Job Documents Folder")
             ->attach($location);
     }
 }

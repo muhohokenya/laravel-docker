@@ -1,11 +1,8 @@
 @component('mail::message')
-# Introduction
+# Job Documents Deleted Files.
 
-The body of your message.
+ {{ count($files) }} have been deleted and transferred from the job documents folder.
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
 
 Thanks,<br>
 {{ config('app.name') }}
