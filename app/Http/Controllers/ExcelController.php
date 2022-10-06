@@ -20,7 +20,7 @@ class ExcelController extends Controller
     public function export(Request $request)
     {
         $files = $request->get('data');
-        $fileName = now()->format('d-m-Y') . "-" . 'transferred-files.xlsx';
+        $fileName = now()->format('d-m-Y') . "-" . 'scheduled-files.xlsx';
         Storage::disk('local')->delete($fileName);
         $response = Excel::store(new UsersExport($files), $fileName);
 
