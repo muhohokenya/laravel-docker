@@ -51,7 +51,7 @@ class ExcelController extends Controller
 
     public function exportAttachmentsReceivedDeletedFiles(Request $request){
         $files = $request->get('data');
-
+        Log::info($files);
     }
 
     public function exportDeletedFiles(Request $request)
