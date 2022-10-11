@@ -12,7 +12,7 @@ class AttachmentsReceivedDeletedFiles extends Mailable
 {
     use Queueable, SerializesModels;
 
-    private $files;
+    public $files;
 
     public function __construct($files)
     {
