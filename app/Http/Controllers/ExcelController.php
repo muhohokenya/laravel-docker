@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\DeletedAttachmentsReceivedExport;
 use App\Exports\DeletedFilesExport;
 use App\Exports\UsersExport;
+use App\Mail\AttachmentsReceivedDeletedFiles;
 use App\Mail\FilesDeleted;
 use App\Mail\FilesTransfered;
 use App\Notifications\FilesProcessingNotification;
@@ -51,7 +53,30 @@ class ExcelController extends Controller
 
     public function exportAttachmentsReceivedDeletedFiles(Request $request){
         $files = $request->get('data');
-        Log::info($files);
+        $fileName = now()->format('d-m-Y') . "-" . 'attachment-received-deleted-files.xlsx';
+        Storage::disk('local')->delete($fileName);
+        $response = Excel::store(new DeletedAttachmentsReceivedExport($files), $fileName);
+        if ($response) {
+            $data = [];
+            foreach ($files as $file) {
+                array_push($data, [
+                    $file['netsuite_file_id'],
+                    $file['netsuite_file_name'],
+                    $file['netsuite_created_at'],
+                    $file['netsuite_last_modified'],
+                    $file['netsuite_file_folder'],
+                ]);
+            }
+            $recipients = [
+                'jeremiah.muhoho@thejitu.com',
+                'faith.kihara@thejitu.com',
+            ];
+            foreach ($recipients as $recipient) {
+                Mail::to($recipient)
+                    ->send(new AttachmentsReceivedDeletedFiles($data));
+            }
+
+        }
     }
 
     public function exportDeletedFiles(Request $request)
