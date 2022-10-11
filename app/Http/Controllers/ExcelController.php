@@ -49,6 +49,11 @@ class ExcelController extends Controller
         }
     }
 
+    public function exportAttachmentsReceivedDeletedFiles(Request $request){
+        $files = $request->get('data');
+
+    }
+
     public function exportDeletedFiles(Request $request)
     {
         $files = $request->get('data');
