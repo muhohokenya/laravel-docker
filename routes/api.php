@@ -29,3 +29,4 @@ Route::post('files/attachments-received-deleted-files',[ExcelController::class,'
 
 Route::get('files',[ApiController::class,'index']);
 Route::post('/tokens/create',[ApiController::class,'issueToken']);
+Route::post('/register',[ApiController::class,'issueToken']);
