@@ -8,7 +8,7 @@
         <form method="POST" action="{{ route('search-files') }}">
         @csrf
 
-        <!-- Email Address -->
+        <!-- Folder -->
             <div>
                 <x-input-label for="folder" :value="__('Enter the folder name')"/>
 
