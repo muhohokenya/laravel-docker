@@ -39,7 +39,7 @@ return [
         'local_custom' => [
             'driver' => 'local',
             //www/cloverfield/webroot/docs/job
-            'root' => '/var/www/cloverfield/webroot/docs/job',
+            'root' => '/var/www/cloverfield/webroot/docs/job/',
             'throw' => false,
         ],
 
