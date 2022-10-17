@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FileSearchController;
 use App\Http\Controllers\Welcome;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/search-files', [FileSearchController::class,'search'])->name('search-files');
 
 Route::get('/dashboard',[Welcome::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
