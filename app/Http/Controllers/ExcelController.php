@@ -23,7 +23,6 @@ class ExcelController extends Controller
     {
         $files = $request->get('data');
         $env = $request->get('env');
-        dd($env);
         $fileName = now()->format('d-m-Y') . "-" . 'scheduled-files.xlsx';
         Storage::disk('local')->delete($fileName);
         $response = Excel::store(new UsersExport($files), $fileName);
@@ -47,7 +46,7 @@ class ExcelController extends Controller
             ];
             foreach ($recipients as $recipient) {
                 Mail::to($recipient)
-                    ->send(new FilesTransfered($data));
+                    ->send(new FilesTransfered($data,$env));
             }
 
         }

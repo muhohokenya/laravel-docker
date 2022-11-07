@@ -16,14 +16,16 @@ class FilesTransfered extends Mailable
     use Queueable, SerializesModels;
 
     public $files;
+    public $env;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($files)
+    public function __construct($files,$env)
     {
         $this->files = $files;
+        $this->env = $env;
     }
 
     /**
@@ -37,7 +39,7 @@ class FilesTransfered extends Mailable
         $location = Storage::path($fileName);
         return $this
             ->markdown('emails.files.transferred')
-            ->subject("Scheduled files for transfer in job Documents folder")
+            ->subject($this->env." "."Scheduled files for transfer in job Documents folder")
             ->attach($location);
     }
 }
