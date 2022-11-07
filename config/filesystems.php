@@ -63,6 +63,19 @@ return [
             'throw' => false,
         ],
 
+        /*
+         *
+         *  's3' => [
+            'version' => 'latest',
+            'region' => 'nyc3',
+            'endpoint' => 'https://nyc3.digitaloceanspaces.com',
+            'credentials' => [
+                'key' => '3L5TOQ7CZMZ3KEQF7QTI',
+                'secret' => 'Zrapq8qSwNrd6050nw3B4OtIjGGDRPXYoR9eF3ZRBA4'
+            ]
+        ],
+         * */
+
     ],
 
     /*
