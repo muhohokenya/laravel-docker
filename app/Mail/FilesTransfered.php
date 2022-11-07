@@ -22,7 +22,7 @@ class FilesTransfered extends Mailable
      *
      * @return void
      */
-    public function __construct($files,$env)
+    public function __construct($files,$env = null)
     {
         $this->files = $files;
         $this->env = $env;
