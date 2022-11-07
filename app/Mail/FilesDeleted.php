@@ -13,14 +13,16 @@ class FilesDeleted extends Mailable
     use Queueable, SerializesModels;
 
     public $files;
+    public $env;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($files)
+    public function __construct($files,$env)
     {
         $this->files = $files;
+        $this->env = $env;
     }
 
     /**
@@ -34,7 +36,7 @@ class FilesDeleted extends Mailable
         $location = Storage::path($fileName);
         return $this
             ->markdown('emails.files.deleted')
-            ->subject("Transferred and deleted files from Job Documents Folder")
+            ->subject($this->env." "." Transferred and deleted files from Job Documents Folder")
             ->attach($location);
     }
 }

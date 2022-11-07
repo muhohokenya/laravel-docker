@@ -83,6 +83,7 @@ class ExcelController extends Controller
     public function exportDeletedFiles(Request $request)
     {
         $files = $request->get('data');
+        $env = $request->get('env');
         $fileName = now()->format('d-m-Y') . "-" . 'deleted-files.xlsx';
         Storage::disk('local')->delete($fileName);
         $response = Excel::store(new DeletedFilesExport($files), $fileName);
@@ -105,7 +106,7 @@ class ExcelController extends Controller
             ];
             foreach ($recipients as $recipient) {
                 Mail::to($recipient)
-                    ->send(new FilesDeleted($data));
+                    ->send(new FilesDeleted($data,$env));
             }
 
         }
