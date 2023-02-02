@@ -23,8 +23,8 @@ services:
         networks:
             - sail
         depends_on:
-            - mysql
-            - redis
+#            - mysql
+#            - redis
             - meilisearch
             - mailhog
             - selenium
